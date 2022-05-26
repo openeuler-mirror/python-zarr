@@ -1,7 +1,7 @@
 %global _empty_manifest_terminate_build 0
 Name:		python-zarr
 Version:	2.4.0
-Release:	1
+Release:	2
 Summary:	An implementation of chunked, compressed, N-dimensional arrays for Python.
 License:	MIT
 URL:		https://github.com/zarr-developers/zarr-python
@@ -17,6 +17,7 @@ Summary:	An implementation of chunked, compressed, N-dimensional arrays for Pyth
 Provides:	python-zarr
 BuildRequires:	python3-devel
 BuildRequires:	python3-setuptools
+BuildRequires:	python3-setuptools_scm
 %description -n python3-zarr
 python3 package for zarr
 
@@ -67,5 +68,8 @@ mv %{buildroot}/doclist.lst .
 %{_docdir}/*
 
 %changelog
+* Tue May 24 2022 YukariChiba <i@0x7f.cc>
+- Add missing dependency
+
 * Wed Jun 24 2020 BruceGW <gyl93216@163.com>
 - init package
